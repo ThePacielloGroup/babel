@@ -17,7 +17,7 @@
     <tr>
         <th><a href="lang/de.html">de</a>
         <td>German
-        <td>
+        <td>German Sign Language (gsg); Turkish (tr)
     <tr>
         <th><a href="lang/dsb.html">dsb</a>
         <td>Lower Sorbian
@@ -25,17 +25,19 @@
     <tr>
         <th><a href="lang/en.html">en</a>
         <td>English
-        <td>Antiguan and Barbudan Creole (aig)
+        <td>Antiguan and Barbudan Creole (aig); Spanish (es)
     <tr>
         <th><a href="lang/es.html">es</a>
         <td>Spanish
-        <td>
+        <td>Catalan (cat)
     <tr>
         <th><a href="lang/gsg.html">gsg</a>
-        <td>German Sign Language
+        <td>TODO German Sign Language
         <td>
     <tr>
         <th><a href="lang/jv.html">jv</a>
         <td>Javanese
         <td>
 </table>
+
+<p>Most test pages also contain phrases in English and French.</p>

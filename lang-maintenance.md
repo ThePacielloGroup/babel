@@ -58,7 +58,13 @@ WCAG:
 
 ## List of links: Web pages in another language
 
-Include a government webpage in another language. In order of preference:
+Purposes of content in other languages:
+
+* Provide realistic examples for "language of parts" testing
+* Give a sense of the multilingual character of the locale
+* Give a sense of the availability of relevant online content
+
+Mention at least one government webpage in another language. In order of preference:
 
 1. A federal government webpage in a language that's more common for this country
 1. A federal government webpage in a language that's less common for this country
@@ -75,13 +81,11 @@ WCAG:
 ## Universal Declaration of Human Rights (UDHR)
 
 1. In the [UDHR search page](https://www.ohchr.org/en/search?f%5B0%5D=event_type_taxonomy_term_name%3AUniversal%20Declaration%20of%20Human%20Rights), under "UDHR Translations" enter the name of the language.
-1. If necessary, use Wikipedia articles to find synonyms and glossonyms for the name of the language, then search again in UDHR.
+1. If necessary, use Wikipedia articles to find synonyms and endonyms for the name of the language, then search again in UDHR.
 1. For the title of the document, the "Article 2" section heading, and the two paragraphs of Article 2, use the UN text.
 
-### UDHR in other language
-
-Both of these:
+### UDHR in other language(s)
 
 * UDHR in another language or two for this country
-* If there is a language worth translating, but it's not available at UN, then "🙅"
+* If there is a relevant language for this country but it's not available at UN, then "🙅"
 * UDHR in French
