@@ -1,10 +1,20 @@
 body {
     max-width: 50em;
 }
+
 .place-nav ul {
     list-style: none;
 }
+
 .place-nav [aria-current=page] {
     text-decoration: none;
     font-weight: bold;
+}
+
+[href="..."]::before {
+    content: '!href!';
+}
+
+[lang="..."]::before {
+    content: '!lang!';
 }
