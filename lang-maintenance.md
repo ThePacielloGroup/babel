@@ -82,5 +82,6 @@ WCAG:
 
 Both of these:
 
-* UDHR in another language for this country
+* UDHR in another language or two for this country
+* If there is a language worth translating, but it's not available at UN, then "🙅"
 * UDHR in French
