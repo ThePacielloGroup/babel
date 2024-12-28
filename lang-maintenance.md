@@ -2,6 +2,8 @@
 
 Note: "speaking" includes signing.
 
+Translations are best-effort. If it's too hard to translate, leave it like "[? Federal government]" (not marked as <code>lang="en"</code>) until a translator can handle it.
+
 ## Choices for each test page
 
 * Language — Something that speakers or linguists identify as a distinct language. These instructions call it the "target language."
