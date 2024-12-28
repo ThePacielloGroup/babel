@@ -2,6 +2,17 @@ body {
     max-width: 50em;
 }
 
+footer {
+    margin: 1em 0;
+    border: 1px solid #e0e0e0; /* for forced colors */ 
+    background: #e0e0e0;
+    padding: 0.2em 0.5em;
+    color: #000; /* in case of an incompatible user color preference */
+}
+footer a {
+    color: #22d; /* in case of an incompatible user color preference */
+}
+
 .place-nav ul {
     list-style: none;
 }
