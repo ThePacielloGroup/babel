@@ -29,3 +29,12 @@ footer a {
 [lang="..."]::before {
     content: '!lang!';
 }
+
+/* To troubleshoot the lang attributes, un-comment this rule. */
+/*
+[lang]::before {
+    content: attr(lang);
+    font-weight: bold;
+    font-style: italic;
+}
+*/
