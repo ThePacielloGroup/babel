@@ -148,13 +148,14 @@
         <!-- id: Umpan balik -->
         <h2>Umpan balik</h2>
 
-        <!-- en: How can we make this website better? -->
-        <!-- id: Bagaimana kami dapat membuat situs web ini lebih baik? -->
-        <form><label for="feedback">Kepiye carane nggawe situs web iki luwih apik?</label><br>
-            <textarea id="feedback"></textarea><br>
+        <form>
+            <!-- en: How can we make this website better? -->
+            <!-- id: Bagaimana kami dapat membuat situs web ini lebih baik? -->
+            <label for="feedback">Kepiye carane nggawe situs web iki luwih apik?</label><br>
+            <textarea id="feedback" cols="60" rows="4"></textarea><br>
             <!-- en: Submit -->
             <!-- id: Kirim -->
-            <input type="submit" value="Kirim">
+            <input type="submit" value="Kirim" onclick="alert('This demo does not submit anything. If you want, you can copy your feedback into an email to Mitchell.'); return false;">
         </form>
     </main>
 

@@ -178,11 +178,22 @@
             </blockquote>
         </div>
 
-        <h2>[? Feedback]</h2>
-
         <form><label for="feedback">[? How can we make this website better?]</label><br>
             <textarea id="feedback"></textarea><br>
             <input type="submit">
+        </form>
+        <!-- en: Feedback -->
+        <!-- de: Feedback -->
+        <h2>[? Feedback]</h2>
+
+        <form>
+            <!--  -->
+            <!-- en: How can we make this website better? -->
+            <label for="feedback">[? How can we make this website better?]</label><br>
+            <textarea id="feedback" cols="60" rows="4"></textarea><br>
+            <!-- en: Submit -->
+            <!-- de: Absenden -->
+            <input type="submit" value="[? Submit]" onclick="alert('This demo does not submit anything. If you want, you can copy your feedback into an email to Mitchell.'); return false;">
         </form>
     </main>
 
