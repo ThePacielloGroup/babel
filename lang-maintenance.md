@@ -46,7 +46,7 @@ Google Translate:
 
 1. Try https://translate.google.com/?hl=xx substituting the language code.
 1. For the link text, use Google's own localized name for the Google Translate page.
-1. If Google supports translation in the target language, but the Google Translate page itself is not localized in the target language, then link to the Google Translate page localized in the national language for the country. Note the national language as "<code>(xx)</code>" after the link.
+1. If Google supports translation in the target language, but the Google Translate page itself is not localized in the target language, then link to the Google Translate page localized in the national language for the country. Note the national language as "([LANGUAGE], <code>[LANGUAGE CODE]</code>)" after the link.
 1. "🙅 Google Translate": indicate that Google does not support translation in the target language. In this context, do not translate this phrase and do not give it a <code>lang</code> attribute.
 
 WCAG:
@@ -54,7 +54,7 @@ WCAG:
 1. Find a translation on the [WCAG 2 Translations](https://www.w3.org/WAI/standards-guidelines/wcag/translations/) page. Note the WCAG version number (2.0, 2.1, 2.2).
 1. If the latest version of WCAG does not have an "authorized" translation, continue with the following steps.
 1. Translate the words "Web Content Accessibility Guidelines" into the target language, and search for this string. If an unofficial translation exists, link to it.
-1. If no translation was found of the latest version, list it with "🙅 WCAG 2.2 ([LANGUAGE CODE])".
+1. If no translation was found of the latest version, list it with "🙅 WCAG 2.2".
 
 ## List of links: Web pages in another language
 
@@ -69,13 +69,13 @@ Mention at least one government webpage in another language. In order of prefere
 1. A federal government webpage in a language that's more common for this country
 1. A federal government webpage in a language that's less common for this country
 1. A local government webpage in a language that's less common for this country
-1. "🙅 Government <code>(xx)</code>": one or two instances, indicating that we couldn't find any suitable page in this other language(s). Translate "Government" into the other language(s).
+1. "🙅 Government ([LANGUAGE], <code>[LANGUAGE CODE]</code>)": one or two instances, indicating that we couldn't find any suitable page in this other language(s). Translate "Government" into the other language(s).
 
 WCAG:
 
 * If there is a language that's more common for this country:
-    * If it has WCAG 2.2, link to it; otherwise "🙅 WCAG 2.2 ([LANGUAGE CODE])".
-    * If it has an older version of WCAG, link to it; followed by "🙅 WCAG 2.2 ([LANGUAGE CODE])".
+    * If it has WCAG 2.2, link to it; otherwise "🙅 WCAG 2.2 ([LANGUAGE], <code>[LANGUAGE CODE]</code>)".
+    * If it has an older version of WCAG, link to it; followed by "🙅 WCAG 2.2 ([LANGUAGE], <code>[LANGUAGE CODE]</code>)".
 * Finally (unless the English link is already included above), always include the English link. Even if WCAG 2.2 is available in the country's languages, this extra link is still useful just to test the English link phrase.
 
 ## Universal Declaration of Human Rights (UDHR)
@@ -87,5 +87,5 @@ WCAG:
 ### UDHR in other language(s)
 
 * UDHR in another language or two for this country
-* If there is a relevant language for this country but it's not available at UN, then "🙅"
+* If there is a relevant language for this country but it's not available at UN, then "🙅 ([LANGUAGE], <code>[LANGUAGE CODE]</code>)"
 * UDHR in French
