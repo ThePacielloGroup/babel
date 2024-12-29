@@ -27,6 +27,7 @@
         <th><a href="lang/jv.html">jv</a>
         <td>Javanese
         <td>Indonesian (id)
+    </tr>
 </table>
 
 <p>Test pages also contain phrases in English and French.</p>
