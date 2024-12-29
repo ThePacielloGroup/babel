@@ -30,4 +30,4 @@
     </tr>
 </table>
 
-<p>Test pages also contain phrases in English and French.</p>
+<p>The language pages also contain phrases in English and French.</p>
