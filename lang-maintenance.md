@@ -42,14 +42,14 @@ Include a government webpage in the target language. In order of preference:
 
 1. A federal government webpage
 1. A local government webpage
-1. "🙅 Government" (translated into the target language): indicate that we couldn't find any suitable page 
+1. "🙅 Government" (translated into the target language): this indicates that we couldn't find any suitable page 
 
 Google Translate:
 
 1. Try https://translate.google.com/?hl=xx substituting the language code.
 1. For the link text, use Google's own localized name for the Google Translate page.
 1. If Google supports translation in the target language, but the Google Translate page itself is not localized in the target language, then link to the Google Translate page localized in the national language for the country. Note the national language as "([LANGUAGE], <code>[LANGUAGE CODE]</code>)" after the link.
-1. "🙅 Google Translate": indicate that Google does not support translation in the target language. In this context, do not translate this phrase and do not give it a <code>lang</code> attribute.
+1. "🙅 Google Translate": this indicates that Google does not support translation in the target language. In this context, do not translate this phrase and do not give it a <code>lang</code> attribute.
 
 WCAG:
 
@@ -71,7 +71,7 @@ Mention at least one government webpage in another language. In order of prefere
 1. A federal government webpage in a language that's more common for this country
 1. A federal government webpage in a language that's less common for this country
 1. A local government webpage in a language that's less common for this country
-1. "🙅 Government ([LANGUAGE], <code>[LANGUAGE CODE]</code>)": one or two instances, indicating that we couldn't find any suitable page in this other language(s). Translate "Government" into the other language(s).
+1. "🙅 Government ([LANGUAGE], <code>[LANGUAGE CODE]</code>)": one or two instances. This indicates that we couldn't find any suitable page in the other language(s). Translate "Government" into the other language(s).
 
 WCAG:
 
@@ -89,5 +89,5 @@ WCAG:
 ### UDHR in other language(s)
 
 * UDHR in another language or two for this country
-* If there is a relevant language for this country but it's not available at UN, then "🙅 ([LANGUAGE], <code>[LANGUAGE CODE]</code>)"
+* If there is a relevant language for this country but it's not available at UN, then "🙅"
 * UDHR in French
