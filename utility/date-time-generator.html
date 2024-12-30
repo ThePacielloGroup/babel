@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Date and time localizer</title>
+    <link rel="stylesheet" href="site.css">
+    <script>
+        function localizeDateAndTime() {
+            try {
+                var localizerOutputForm = document.forms["localizer-output"];
+                localizerOutputForm.reset(); //Do this first, so bad input results in blank output
+
+                var localizerForm = document.forms["localizer"];
+                var regionCode = localizerForm.elements["region-code"].value;
+                var date = Date.parse(localizerForm.elements["date"].value);
+                var time = Date.parse("2000-01-01T" + localizerForm.elements["time"].value);
+                var regionResult, dateResult, dateResultLong, timeResult;
+                var regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' })
+
+                regionResult = regionNamesInEnglish.of(regionCode);
+                localizerOutputForm.elements["region-result"].value = regionResult;
+
+                try {
+                    // regionCode = localizerForm.elements["region-code"].value;
+
+                } catch (error) {
+                    return;
+                }
+                dateResult = new Intl.DateTimeFormat(regionCode).format(date);
+                localizerOutputForm.elements["date-result"].value = dateResult;
+
+                dateResultLong = new Intl.DateTimeFormat(regionCode, {dateStyle: 'long'}).format(date);
+                localizerOutputForm.elements["date-result-long"].value = dateResultLong;
+
+                timeResult = new Intl.DateTimeFormat(regionCode, {dateStyle: 'long'}).format(date);
+                localizerOutputForm.elements["date-result-long"].value = dateResultLong;
+
+                console.log("OK " + regionCode + " " + regionResult);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <p><a href="/">🏠 Home</a> &gt; <a href="./">Utilities</a> &gt;</p>
+    </header>
+    <main>
+        <h1>Date and time localizer</h1>
+    
+        <form name="localizer" onsubmit="localizeDateAndTime(); return false;">
+            <p><label for="region-code">Region code</label> <input type="text" name="region-code" id="region-code"></p>
+            <p><label for="date">Date in year-month-day format (yyyy-mm-dd)</label> <input type="text" name="date" id="date"></p>
+            <p><label for="time">Time in 24-hour format (hh:mm)</label> <input type="text" name="time" id="time"></p>
+    
+            <p><input type="submit" value="Localize"></p>
+        </form>
+        <form name="localizer-output">
+    
+            <p><label for="region-result">Region name:</label> <output id="region-result"></output></p>
+            <p><label for="date-result">Short date result:</label> <output id="date-result"></output></p>
+            <p><label for="date-result-long">Long date result:</label> <output id="date-result-long"></output></p>
+            <p><label for="time-result">Time result:</label> <output id="time-result"></output></p>
+    
+        </form>
+    
+    </main>
+
+</body>
+
+</html>
