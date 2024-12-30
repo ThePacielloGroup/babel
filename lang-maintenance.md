@@ -28,7 +28,8 @@ Translations are best-effort. If it's too hard to translate, leave it like "[? F
 ## Table of opening hours
 
 * Confirm the week starts on Monday in this country. Example: [Calendar for Year 2024 (Antigua and Barbuda) - TimeAndDate](https://www.timeanddate.com/calendar/?year=2024&country=221)
-
+* Put the later hours on a random day of the week. (So we can ask participants a usability question about the table: When is the library open later?)
+* Localize the time range, including the dash format. (See <a href="https://github.com/ThePacielloGroup/babel/issues/38">issue 38</a>.)
 
 ## List of links: Web pages in the target language
 
