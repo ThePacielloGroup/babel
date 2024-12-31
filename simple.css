@@ -188,6 +188,7 @@ h3 {
 }
 
 /* Reduce header size on mobile */
+/*
 @media only screen and (max-width: 720px) {
   h1 {
     font-size: 2.5rem;
@@ -205,6 +206,7 @@ h3 {
     font-size: 1.25rem;
   }
 }
+*/
 
 /* Format links & buttons */
 a,
@@ -444,7 +446,7 @@ th {
 
 tr:nth-child(even) {
   /* Set every other cell slightly darker. Improves readability. */
-  background-color: var(--accent-bg);
+/*  background-color: var(--accent-bg); */
 }
 
 table caption {
@@ -616,7 +618,7 @@ blockquote {
   padding: 0.4rem 0.8rem;
   border-inline-start: 0.35rem solid var(--accent);
   color: var(--text-light);
-  font-style: italic;
+/*  font-style: italic; */
 }
 
 cite {
