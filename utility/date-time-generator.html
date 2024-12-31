@@ -11,32 +11,43 @@
                 var localizerOutputForm = document.forms["localizer-output"];
                 localizerOutputForm.reset(); //Do this first, so bad input results in blank output
 
-                var localizerForm = document.forms["localizer"];
-                var regionCode = localizerForm.elements["region-code"].value;
-                var date = Date.parse(localizerForm.elements["date"].value);
-                var time = Date.parse("2000-01-01T" + localizerForm.elements["time"].value);
-                var regionResult, dateResult, dateResultLong, timeResult;
-                var regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' })
+                var localizerForm = document.forms["localizer"]; //inputs
 
-                regionResult = regionNamesInEnglish.of(regionCode);
-                localizerOutputForm.elements["region-result"].value = regionResult;
-
+                var languageNamesInEnglish, languageCode, languageResult;
                 try {
-                    // regionCode = localizerForm.elements["region-code"].value;
-
+                    languageCode = localizerForm.elements["language-code"].value;
+                    languageNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'language' })
+//                    var x = Intl.DateTimeFormat.supportedLocalesOf(languageCode, {localeMatcher: 'lookup'});
+//                    console.log(x);
+                    languageResult = languageNamesInEnglish.of(languageCode);
+                    localizerOutputForm.elements["language-result"].value = languageResult;
+                    console.log("OK " + languageCode + " " + languageResult);
                 } catch (error) {
+                    console.error(error);
                     return;
                 }
-                dateResult = new Intl.DateTimeFormat(regionCode).format(date);
-                localizerOutputForm.elements["date-result"].value = dateResult;
 
-                dateResultLong = new Intl.DateTimeFormat(regionCode, {dateStyle: 'long'}).format(date);
-                localizerOutputForm.elements["date-result-long"].value = dateResultLong;
+                var date, dateResultShort, dateResult, dateResultLong;
+                try {
+                    date = Date.parse(localizerForm.elements["date"].value);
+                    dateResultShort = new Intl.DateTimeFormat(languageCode, {dateStyle: 'short', localeMatcher: 'lookup'}).format(date);
+                    localizerOutputForm.elements["date-result-short"].value = dateResultShort;
+                    dateResult = new Intl.DateTimeFormat(languageCode, {localeMatcher: 'lookup'}).format(date);
+                    localizerOutputForm.elements["date-result"].value = dateResult;
+                    dateResultLong = new Intl.DateTimeFormat(languageCode, {dateStyle: 'long', localeMatcher: 'lookup'}).format(date);
+                    localizerOutputForm.elements["date-result-long"].value = dateResultLong;
+                } catch (error) {
+                    console.error(error);
+                }
 
-                timeResult = new Intl.DateTimeFormat(regionCode, {dateStyle: 'long'}).format(date);
-                localizerOutputForm.elements["date-result-long"].value = dateResultLong;
-
-                console.log("OK " + regionCode + " " + regionResult);
+                var time, timeResult;
+                try {
+                    time = Date.parse("2000-01-01T" + localizerForm.elements["time"].value);
+                    timeResult = new Intl.DateTimeFormat(languageCode, {timeStyle: 'short', localeMatcher: 'lookup'}).format(time);
+                    localizerOutputForm.elements["time-result"].value = timeResult;
+                } catch (error) {
+                    console.error(error);
+                }
             } catch (error) {
                 console.error(error);
             }
@@ -52,19 +63,22 @@
         <h1>Date and time localizer</h1>
     
         <form name="localizer" onsubmit="localizeDateAndTime(); return false;">
-            <p><label for="region-code">Region code</label> <input type="text" name="region-code" id="region-code"></p>
+            <p>Enter a <a href="https://r12a.github.io/app-subtags/">language code</a>, with an <a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">optional subtag</a> for <a href="https://www.w3.org/International/questions/qa-choosing-language-tags">region or script</a>. Submit and get the results below.</p>
+            <p><label for="language-code">Language code (examples: de, en-GB, uz-Arab)</label> <input type="text" name="language-code" id="language-code"></p>
             <p><label for="date">Date in year-month-day format (yyyy-mm-dd)</label> <input type="text" name="date" id="date"></p>
             <p><label for="time">Time in 24-hour format (hh:mm)</label> <input type="text" name="time" id="time"></p>
     
             <p><input type="submit" value="Localize"></p>
         </form>
-        <form name="localizer-output">
-    
-            <p><label for="region-result">Region name:</label> <output id="region-result"></output></p>
-            <p><label for="date-result">Short date result:</label> <output id="date-result"></output></p>
-            <p><label for="date-result-long">Long date result:</label> <output id="date-result-long"></output></p>
-            <p><label for="time-result">Time result:</label> <output id="time-result"></output></p>
-    
+
+        <h2>Results</h2>
+
+        <form name="localizer-output">    
+            <p><label for="language-result">Language name:</label> <input readonly="" type="text" id="language-result" size="50"></p>
+            <p><label for="date-result-short">Short date result:</label> <input readonly="" type="text"  id="date-result-short"></p>
+            <p><label for="date-result">Date result:</label> <input readonly="" type="text" id="date-result"></p>
+            <p><label for="date-result-long">Long date result:</label> <input readonly="" type="text"  id="date-result-long"></p>
+            <p><label for="time-result">Time result:</label> <input readonly="" type="text"  id="time-result"></p>
         </form>
     
     </main>
