@@ -1,0 +1,8 @@
+.place-nav ul {
+    list-style: none;
+}
+
+.place-nav [aria-current=page] {
+    text-decoration: none;
+    font-weight: bold;
+}

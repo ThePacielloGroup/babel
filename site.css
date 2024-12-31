@@ -1,25 +1,10 @@
-body {
-    max-width: 50em;
-}
+/* To troubleshoot languages and links, un-comment these rules. "Debug" makes it clear that the stylesheet has applied. */
 
-footer {
-    margin: 1em 0;
-    border: 1px solid #e0e0e0; /* for forced colors */ 
-    background: #e0e0e0;
-    padding: 0.2em 0.5em;
-    color: #000; /* in case of an incompatible user color preference */
-}
-footer a {
-    color: #22d; /* in case of an incompatible user color preference */
-}
-
-.place-nav ul {
-    list-style: none;
-}
-
-.place-nav [aria-current=page] {
-    text-decoration: none;
+/*
+body::before {
+    content: 'debug';
     font-weight: bold;
+    color: red;
 }
 
 [href="..."]::before {
@@ -30,8 +15,6 @@ footer a {
     content: '!lang!';
 }
 
-/* To troubleshoot the lang attributes, un-comment this rule. */
-/*
 [lang]::before {
     content: attr(lang);
     font-weight: bold;
