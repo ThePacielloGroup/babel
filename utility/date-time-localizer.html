@@ -9,7 +9,7 @@
         function localizeDateAndTime() {
             try {
                 var localizerOutputForm = document.forms["localizer-output"];
-                localizerOutputForm.reset(); //Do this first, so bad input results in blank output
+                localizerOutputForm.reset(); //Do this first, so bad inputs will result in blank outputs
 
                 var localizerForm = document.forms["localizer"]; //inputs
 
@@ -17,8 +17,6 @@
                 try {
                     languageCode = localizerForm.elements["language-code"].value;
                     languageNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'language' })
-//                    var x = Intl.DateTimeFormat.supportedLocalesOf(languageCode, {localeMatcher: 'lookup'});
-//                    console.log(x);
                     languageResult = languageNamesInEnglish.of(languageCode);
                     localizerOutputForm.elements["language-result"].value = languageResult;
                     console.log("OK " + languageCode + " " + languageResult);
@@ -40,11 +38,21 @@
                     console.error(error);
                 }
 
+
                 var time, timeResult;
                 try {
                     time = Date.parse("2000-01-01T" + localizerForm.elements["time"].value);
                     timeResult = new Intl.DateTimeFormat(languageCode, {timeStyle: 'short', localeMatcher: 'lookup'}).format(time);
                     localizerOutputForm.elements["time-result"].value = timeResult;
+                } catch (error) {
+                    console.error(error);
+                }
+
+                var time2, timeRangeResult;
+                try {
+                    time2 = Date.parse("2000-01-01T" + localizerForm.elements["time2"].value);
+                    timeRangeResult = new Intl.DateTimeFormat(languageCode, {timeStyle: 'short', localeMatcher: 'lookup'}).formatRange(time, time2);
+                    localizerOutputForm.elements["time-range-result"].value = timeRangeResult;
                 } catch (error) {
                     console.error(error);
                 }
@@ -67,6 +75,7 @@
             <p><label for="language-code">Language code (examples: de, en-GB, uz-Arab)</label> <input type="text" name="language-code" id="language-code"></p>
             <p><label for="date">Date in year-month-day format (yyyy-mm-dd)</label> <input type="text" name="date" id="date"></p>
             <p><label for="time">Time in 24-hour format (hh:mm)</label> <input type="text" name="time" id="time"></p>
+            <p><label for="time2">A later time</label> <input type="text" name="time2" id="time2"></p>
     
             <p><input type="submit" value="Localize"></p>
         </form>
@@ -75,10 +84,11 @@
 
         <form name="localizer-output">    
             <p><label for="language-result">Language name:</label> <input readonly="" type="text" id="language-result" size="50"></p>
-            <p><label for="date-result-short">Short date result:</label> <input readonly="" type="text"  id="date-result-short"></p>
+            <p><label for="date-result-short">Short date result:</label> <input readonly="" type="text" id="date-result-short"></p>
             <p><label for="date-result">Date result:</label> <input readonly="" type="text" id="date-result"></p>
-            <p><label for="date-result-long">Long date result:</label> <input readonly="" type="text"  id="date-result-long"></p>
-            <p><label for="time-result">Time result:</label> <input readonly="" type="text"  id="time-result"></p>
+            <p><label for="date-result-long">Long date result:</label> <input readonly="" type="text" id="date-result-long"></p>
+            <p><label for="time-result">Time result:</label> <input readonly="" type="text" id="time-result"></p>
+            <p><label for="time-range-result">Time range result:</label> <input readonly="" type="text" id="time-range-result"></p>
         </form>
     
     </main>
