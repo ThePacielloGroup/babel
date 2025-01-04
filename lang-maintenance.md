@@ -2,7 +2,7 @@
 
 Note: "speaking" includes signing.
 
-Translations are best-effort. If it's too hard to translate, leave it like "[? Federal government]" (not marked as <code>lang="en"</code>) until a translator can handle it.
+Translations are best-effort. If it's too hard to translate, leave it like "[? Central government]" (not marked as <code>lang="en"</code>) until a translator can handle it.
 
 ## Choices for each test page
 
@@ -41,7 +41,7 @@ Wikipedia:
 
 Include a government webpage in the target language. In order of preference:
 
-1. A federal government webpage
+1. A central government webpage
 1. A local government webpage
 1. "🙅 Government" (translated into the target language): this indicates that we couldn't find any suitable page 
 
@@ -69,8 +69,8 @@ Purposes of content in other languages:
 
 Mention at least one government webpage in another language. In order of preference:
 
-1. A federal government webpage in a language that's more common for this country
-1. A federal government webpage in a language that's less common for this country
+1. A central government webpage in a language that's more common for this country
+1. A central government webpage in a language that's less common for this country
 1. A local government webpage in a language that's less common for this country
 1. "🙅 Government ([LANGUAGE], <code>[LANGUAGE CODE]</code>)": one or two instances. This indicates that we couldn't find any suitable page in the other language(s). Translate "Government" into the other language(s).
 
