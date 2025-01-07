@@ -1,4 +1,6 @@
-# Test results for all language demo pages
+# Test results for the language demo pages
+
+Status: Work in progress, no results yet
 
 <!-- In alphabetical order by language code -->
 

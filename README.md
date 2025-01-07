@@ -2,10 +2,13 @@
 
 ## Test suite for multilingual web content
 
-[Language pages](lang-pages.md)
+* [Language demo pages](lang-pages.md)
 
-[Maintaining the language pages](lang-maintenance.md)
+## Test results
 
-## Research
+* [Test results for the language demo pages](research/lang-results.html)
 
-TODO table of results
+## Tools
+
+* [Date and time localizer](utility/date-time-localizer.html)
+* [Maintaining the language demo pages](lang-maintenance.md)
