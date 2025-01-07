@@ -1,4 +1,4 @@
-# Procedures for creating and maintaining the language pages
+# How to create and maintain the language demo pages
 
 Note: "speaking" includes signing.
 
