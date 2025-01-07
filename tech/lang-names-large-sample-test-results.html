@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results for Language names, large sample</title>
+    <link rel="stylesheet" href="../simple.css">
+    <link rel="stylesheet" href="../site.css">
+</head>
+
+<body>
+
+    <main>
+        <h1>Results for Language names, large sample</h1>
+
+        <p>Test page: <a href="lang-names-large-sample.html">Language names, large sample</a></p>
+
+        <p>Observations 2025-01-07: Of the combos tested today, only JAWS announces language names. "Known" examples are e.g. English, Spanish, German; while Lower Serbian (dsb) is not known. Which languages are "known" varies by screen reader, that's part of what we're exploring here.</p>
+
+        <p>Windows 10, JAWS, Chrome:</p>
+        <ul>
+            <li>Known language, with voice available: Announces digits in this language. Example: "veinte" for Spanish (es).</li>
+            <li>Known language, without voice available: Announces the language name, then the digits in English. Example: "Croatian, twenty-seven" (hr).</li>
+            <li>Unknown language: Announces digits in English (the language of the page).</li>
+        </ul>
+
+        <p>Android TalkBack + Chrome:</p>
+        <ul>
+            <li>Known language: Announces digits in this language.</li>
+            <li>Unknown language: Announces digits in the most recent language touched.</li>
+        </ul>
+
+        <p>Android TalkBack + Chrome:</p>
+        <ul>
+            <li>Announces all digits in English (the language of the page), for both known and unknown languages.</li>
+        </ul>
+
+    </main>
+
+    <footer>
+        <p><a href="../">🏠 Home</a> &gt; <a href="../research/tech-results.md">Test results for all technical tests</a></p>
+    </footer>
+
+</body>
+
+</html>
