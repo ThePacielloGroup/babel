@@ -1,4 +1,4 @@
-# Language pages
+# Language demo pages
 
 <!-- In alphabetical order by language code -->
 
