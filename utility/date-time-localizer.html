@@ -72,11 +72,11 @@
         <h1>Date and time localizer</h1>
     
         <form name="localizer" onsubmit="localizeDateAndTime(); return false;">
-            <p>Enter <a href="https://r12a.github.io/app-subtags/">a language code and an optional region or script code</a>. Submit and get the results below.</p>
-            <p><label for="language-code">Language code (examples: de, en-GB, uz-Arab)</label> <input type="text" name="language-code" id="language-code"></p>
+            <p>Enter a <a href="https://r12a.github.io/app-subtags/">language tag with an optional region or script subtag</a>. Submit and get the results below.</p>
+            <p><label for="language-code">Language tag (examples: de, en-GB, uz-Arab)</label> <input type="text" name="language-code" id="language-code"></p>
             <p><label for="date">Date in year-month-day format (yyyy-mm-dd)</label> <input type="text" name="date" id="date"></p>
             <p><label for="time">Time in 24-hour format (hh:mm)</label> <input type="text" name="time" id="time"></p>
-            <p><label for="time2">A later time</label> <input type="text" name="time2" id="time2"></p>
+            <p><label for="time2">A later time (hh:mm)</label> <input type="text" name="time2" id="time2"></p>
     
             <p><input type="submit" value="Localize"></p>
         </form>
@@ -84,13 +84,17 @@
         <h2>Results</h2>
 
         <form name="localizer-output">    
-            <p><label for="language-result">Language name:</label> <input readonly="" type="text" id="language-result" size="50"></p>
-            <p><label for="date-result-short">Short date result:</label> <input readonly="" type="text" id="date-result-short"></p>
-            <p><label for="date-result">Date result:</label> <input readonly="" type="text" id="date-result"></p>
-            <p><label for="date-result-long">Long date result:</label> <input readonly="" type="text" id="date-result-long"></p>
-            <p><label for="time-result">Time result:</label> <input readonly="" type="text" id="time-result"></p>
-            <p><label for="time-range-result">Time range result:</label> <input readonly="" type="text" id="time-range-result"></p>
+            <p><label for="language-result">Language name</label> <input readonly="" type="text" id="language-result" size="50"></p>
+            <p><label for="date-result-short">Short date result</label> <input readonly="" type="text" id="date-result-short"></p>
+            <p><label for="date-result">Date result</label> <input readonly="" type="text" id="date-result"></p>
+            <p><label for="date-result-long">Long date result</label> <input readonly="" type="text" id="date-result-long"></p>
+            <p><label for="time-result">Time result</label> <input readonly="" type="text" id="time-result"></p>
+            <p><label for="time-range-result">Time range result</label> <input readonly="" type="text" id="time-range-result"></p>
         </form>
+
+        <h2>How this works</h2>
+
+        <p>The tool uses JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">localization methods</a>. Tested in Firefox and Chrome, December 2024.</p>
     
     </main>
 
