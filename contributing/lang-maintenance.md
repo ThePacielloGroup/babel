@@ -8,16 +8,16 @@ Translations are best-effort. If it's too hard to translate, leave it like "[? C
 
 * Language — Something that speakers or linguists identify as a distinct language. These instructions call it the "target language."
 * Country — A country associated with the target language.
-* Locale — The locale could be the same as the country. Or it could be a region that's associated with the target language within the country. (Example: Some people speak Lower Sorbian in the city of [Cottbus, Germany](lang/dsb.html).)
+* Locale — The locale could be the same as the country. Or it could be a region that's associated with a target language within the country. (Example: Some people speak Lower Sorbian in the city of [Cottbus, Germany](../lang/dsb.html).)
 * Script (optional) — An alternate writing system.
 * Language code: Usually just the two- or three-character IANA language code. We don't add the country, locale, or script unless it's important to distinguish the form of the target language.
 
 ## Adding a page
 
 * Copy a stub language page the template HTML. Name the file with the language code.
-* Add it to the [list of language pages](lang-pages.md).
+* Add it to the [list of language pages](../lang-pages.md).
 * Copy a stub results page from the template HTML. Name the file with the language code.
-* Add it to the [list of test results](research/lang-results.md).
+* Add it to the [list of test results](../research/lang-results.md).
 * In the individual results page, fill the "Creating the test page" section as you go.
 
 ## Navigation
@@ -25,11 +25,15 @@ Translations are best-effort. If it's too hard to translate, leave it like "[? C
 * Copy the flag icon character from [Emoji flags (Wikipedia)](https://en.wikipedia.org/wiki/Regional_indicator_symbol#Emoji_flag_sequences).
 * Alphabetize it by flag code, link language, and URL language — in other words, alphabetize the lines of HTML code in the list. Mainly this groups languages by country.
 
+## Translation
+
+The file lang-strings.txt contains the directly translatable strings, which is convenient for machine translation. For human translation, you can work in the (lang).html file directly for better context.
+
 ## Table of opening hours
 
 * Confirm the week starts on Monday in this country. Example: [Calendar for Year 2024 (Antigua and Barbuda) - TimeAndDate](https://www.timeanddate.com/calendar/?year=2024&country=221)
 * Put the later hours on a random day of the week. (So we can ask participants a usability question about the table: When is the library open later?)
-* Localize the time range with the [Date and Time Localizer](utility/date-time-localizer.html) tool. But don't trust the dash character: see <a href="https://github.com/ThePacielloGroup/babel/issues/38">issue 38</a>.
+* Localize the time range with the [Date and Time Localizer](../utility/date-time-localizer.html) tool. But don't trust the dash character: see <a href="https://github.com/ThePacielloGroup/babel/issues/38">issue 38</a>.
 
 ## List of links: Web pages in the target language
 
@@ -47,7 +51,7 @@ Include a government webpage in the target language. In order of preference:
 
 Google Translate:
 
-1. Try https://translate.google.com/?hl=xx substituting the language code.
+1. Try https://translate.google.com/?hl=xxx substituting the language code.
 1. For the link text, use Google's own localized name for the Google Translate page.
 1. If Google supports translation in the target language, but the Google Translate page itself is not localized in the target language, then link to the Google Translate page localized in the national language for the country. Note the national language as "([LANGUAGE], <code>[LANGUAGE CODE]</code>)" after the link.
 1. "🙅 Google Translate": this indicates that Google does not support translation in the target language. In this context, do not translate this phrase and do not give it a <code>lang</code> attribute.

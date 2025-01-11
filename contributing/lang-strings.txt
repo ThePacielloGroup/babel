@@ -1,0 +1,30 @@
+[? Calabria - Italian]
+[? Welcome to Calabria]
+[? Some people speak Italian here.]
+[? Library]
+[? Ask a librarian about Italian.]
+[? Ask the library staff about Italian.] ((gender-neutral))
+[? Opening hours of the library]
+[? Day]
+[? Day of the week] ((more specific))
+[? Hours]
+[? Opening hours] ((more specific))
+[? Monday]
+[? Tuesday]
+[? Wednesday]
+[? Thursday]
+[? Friday]
+[? Saturday]
+[? Sunday]
+[? closed]
+[? We had a special celebration on July 1, 2024.]
+[? Web pages in Italian]
+[? Wikipedia]
+[? Government] ((if needed))
+[? Web pages in other languages]
+[? Universal Declaration of Human Rights] ((copy this from the source))
+[? Article 2] ((copy this from the source))
+[? Feedback]
+[? How can we make this website better?]
+[? Submit]
+[? "Submit" button in a web form] ((context))
