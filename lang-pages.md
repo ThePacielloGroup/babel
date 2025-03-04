@@ -36,7 +36,7 @@
     <tr>
         <th><a href="lang/ur.html">ur</a></th>
         <td>Urdu</td>
-        <td></td>
+        <td>Western Panjabi (pnb); Panjabi (pan)</td>
     </tr>
 </table>
 
