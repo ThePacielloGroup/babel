@@ -33,6 +33,11 @@
         <td>Javanese</td>
         <td>Indonesian (id)</td>
     </tr>
+    <tr>
+        <th><a href="lang/ur.html">ur</a></th>
+        <td>Urdu</td>
+        <td></td>
+    </tr>
 </table>
 
 The language pages also contain phrases in English and French.
