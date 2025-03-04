@@ -34,6 +34,11 @@
         <td>Indonesian (id)</td>
     </tr>
     <tr>
+        <th><a href="lang/it.html">it</a></th>
+        <td>Italian</td>
+        <td>Sicilian (scn); Neapolitan (nap); Spanish (es)</td>
+    </tr>
+    <tr>
         <th><a href="lang/ur.html">ur</a></th>
         <td>Urdu</td>
         <td>Western Panjabi (pnb); Panjabi (pan)</td>
