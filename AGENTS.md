@@ -2,5 +2,5 @@ The purpose of this project is to explore and demonstrate how accessibility diff
 
 Priorities:
 
-1. All UI needs to be born accessible, except for experiments and antipattern demos.
+1. All UI needs to be born accessible, except for accessibility experiments and accessibility antipattern demos.
 2. Ask if you're not sure about something. Don't guess.
